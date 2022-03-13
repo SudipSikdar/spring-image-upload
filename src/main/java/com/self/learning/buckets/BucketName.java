@@ -2,7 +2,7 @@ package com.self.learning.buckets;
 
 public enum BucketName {
 
-    PROFILE_IMAGE("aws-spring-image-upload");
+    PROFILE_IMAGE("image-upload");
 
     private final String bucketName;
 

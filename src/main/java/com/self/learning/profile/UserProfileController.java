@@ -23,6 +23,11 @@ public class UserProfileController {
         return userProfileService.getUserProfiles();
     }
 
+    @GetMapping(path = "{userProfileId}/image/download")
+    public byte[] downloadProfileImage(@PathVariable("userProfileId") UUID userProfileId) {
+        return userProfileService.downloadProfileImage(userProfileId);
+    }
+
     @PostMapping(
             path = "{userProfileId}/image/upload",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
